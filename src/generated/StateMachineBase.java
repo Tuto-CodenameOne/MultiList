@@ -34,7 +34,6 @@ public abstract class StateMachineBase extends UIBuilder {
         initVars();
         UIBuilder.registerCustomComponent("Tabs", com.codename1.ui.Tabs.class);
         UIBuilder.registerCustomComponent("Form", com.codename1.ui.Form.class);
-        UIBuilder.registerCustomComponent("InfiniteProgress", com.codename1.components.InfiniteProgress.class);
         UIBuilder.registerCustomComponent("MultiList", com.codename1.ui.list.MultiList.class);
         UIBuilder.registerCustomComponent("Label", com.codename1.ui.Label.class);
         UIBuilder.registerCustomComponent("Container", com.codename1.ui.Container.class);
@@ -70,7 +69,6 @@ public abstract class StateMachineBase extends UIBuilder {
         initVars();
         UIBuilder.registerCustomComponent("Tabs", com.codename1.ui.Tabs.class);
         UIBuilder.registerCustomComponent("Form", com.codename1.ui.Form.class);
-        UIBuilder.registerCustomComponent("InfiniteProgress", com.codename1.components.InfiniteProgress.class);
         UIBuilder.registerCustomComponent("MultiList", com.codename1.ui.list.MultiList.class);
         UIBuilder.registerCustomComponent("Label", com.codename1.ui.Label.class);
         UIBuilder.registerCustomComponent("Container", com.codename1.ui.Container.class);
@@ -111,18 +109,6 @@ public abstract class StateMachineBase extends UIBuilder {
         this(res, null, loadTheme);
     }
 
-    public com.codename1.ui.Container findContainer3(Component root) {
-        return (com.codename1.ui.Container)findByName("Container3", root);
-    }
-
-    public com.codename1.ui.Container findContainer3() {
-        com.codename1.ui.Container cmp = (com.codename1.ui.Container)findByName("Container3", Display.getInstance().getCurrent());
-        if(cmp == null && aboutToShowThisContainer != null) {
-            cmp = (com.codename1.ui.Container)findByName("Container3", aboutToShowThisContainer);
-        }
-        return cmp;
-    }
-
     public com.codename1.ui.Container findContainer2(Component root) {
         return (com.codename1.ui.Container)findByName("Container2", root);
     }
@@ -131,42 +117,6 @@ public abstract class StateMachineBase extends UIBuilder {
         com.codename1.ui.Container cmp = (com.codename1.ui.Container)findByName("Container2", Display.getInstance().getCurrent());
         if(cmp == null && aboutToShowThisContainer != null) {
             cmp = (com.codename1.ui.Container)findByName("Container2", aboutToShowThisContainer);
-        }
-        return cmp;
-    }
-
-    public com.codename1.ui.Container findContainer1(Component root) {
-        return (com.codename1.ui.Container)findByName("Container1", root);
-    }
-
-    public com.codename1.ui.Container findContainer1() {
-        com.codename1.ui.Container cmp = (com.codename1.ui.Container)findByName("Container1", Display.getInstance().getCurrent());
-        if(cmp == null && aboutToShowThisContainer != null) {
-            cmp = (com.codename1.ui.Container)findByName("Container1", aboutToShowThisContainer);
-        }
-        return cmp;
-    }
-
-    public com.codename1.components.InfiniteProgress findInfiniteProgress(Component root) {
-        return (com.codename1.components.InfiniteProgress)findByName("InfiniteProgress", root);
-    }
-
-    public com.codename1.components.InfiniteProgress findInfiniteProgress() {
-        com.codename1.components.InfiniteProgress cmp = (com.codename1.components.InfiniteProgress)findByName("InfiniteProgress", Display.getInstance().getCurrent());
-        if(cmp == null && aboutToShowThisContainer != null) {
-            cmp = (com.codename1.components.InfiniteProgress)findByName("InfiniteProgress", aboutToShowThisContainer);
-        }
-        return cmp;
-    }
-
-    public com.codename1.ui.list.MultiList findMultiList1(Component root) {
-        return (com.codename1.ui.list.MultiList)findByName("MultiList1", root);
-    }
-
-    public com.codename1.ui.list.MultiList findMultiList1() {
-        com.codename1.ui.list.MultiList cmp = (com.codename1.ui.list.MultiList)findByName("MultiList1", Display.getInstance().getCurrent());
-        if(cmp == null && aboutToShowThisContainer != null) {
-            cmp = (com.codename1.ui.list.MultiList)findByName("MultiList1", aboutToShowThisContainer);
         }
         return cmp;
     }
@@ -183,6 +133,18 @@ public abstract class StateMachineBase extends UIBuilder {
         return cmp;
     }
 
+    public com.codename1.ui.Container findContainer1(Component root) {
+        return (com.codename1.ui.Container)findByName("Container1", root);
+    }
+
+    public com.codename1.ui.Container findContainer1() {
+        com.codename1.ui.Container cmp = (com.codename1.ui.Container)findByName("Container1", Display.getInstance().getCurrent());
+        if(cmp == null && aboutToShowThisContainer != null) {
+            cmp = (com.codename1.ui.Container)findByName("Container1", aboutToShowThisContainer);
+        }
+        return cmp;
+    }
+
     public com.codename1.ui.Label findLabel1(Component root) {
         return (com.codename1.ui.Label)findByName("Label1", root);
     }
@@ -191,6 +153,30 @@ public abstract class StateMachineBase extends UIBuilder {
         com.codename1.ui.Label cmp = (com.codename1.ui.Label)findByName("Label1", Display.getInstance().getCurrent());
         if(cmp == null && aboutToShowThisContainer != null) {
             cmp = (com.codename1.ui.Label)findByName("Label1", aboutToShowThisContainer);
+        }
+        return cmp;
+    }
+
+    public com.codename1.ui.list.MultiList findMultiList2(Component root) {
+        return (com.codename1.ui.list.MultiList)findByName("MultiList2", root);
+    }
+
+    public com.codename1.ui.list.MultiList findMultiList2() {
+        com.codename1.ui.list.MultiList cmp = (com.codename1.ui.list.MultiList)findByName("MultiList2", Display.getInstance().getCurrent());
+        if(cmp == null && aboutToShowThisContainer != null) {
+            cmp = (com.codename1.ui.list.MultiList)findByName("MultiList2", aboutToShowThisContainer);
+        }
+        return cmp;
+    }
+
+    public com.codename1.ui.list.MultiList findMultiList1(Component root) {
+        return (com.codename1.ui.list.MultiList)findByName("MultiList1", root);
+    }
+
+    public com.codename1.ui.list.MultiList findMultiList1() {
+        com.codename1.ui.list.MultiList cmp = (com.codename1.ui.list.MultiList)findByName("MultiList1", Display.getInstance().getCurrent());
+        if(cmp == null && aboutToShowThisContainer != null) {
+            cmp = (com.codename1.ui.list.MultiList)findByName("MultiList1", aboutToShowThisContainer);
         }
         return cmp;
     }
@@ -231,18 +217,6 @@ public abstract class StateMachineBase extends UIBuilder {
         return cmp;
     }
 
-    public com.codename1.ui.list.MultiList findMultiList11(Component root) {
-        return (com.codename1.ui.list.MultiList)findByName("MultiList11", root);
-    }
-
-    public com.codename1.ui.list.MultiList findMultiList11() {
-        com.codename1.ui.list.MultiList cmp = (com.codename1.ui.list.MultiList)findByName("MultiList11", Display.getInstance().getCurrent());
-        if(cmp == null && aboutToShowThisContainer != null) {
-            cmp = (com.codename1.ui.list.MultiList)findByName("MultiList11", aboutToShowThisContainer);
-        }
-        return cmp;
-    }
-
     public com.codename1.ui.Container findContainer(Component root) {
         return (com.codename1.ui.Container)findByName("Container", root);
     }
@@ -256,12 +230,6 @@ public abstract class StateMachineBase extends UIBuilder {
     }
 
     protected void exitForm(Form f) {
-        if("ULP_SpashScreen".equals(f.getName())) {
-            exitULPSpashScreen(f);
-            aboutToShowThisContainer = null;
-            return;
-        }
-
         if("Main".equals(f.getName())) {
             exitMain(f);
             aboutToShowThisContainer = null;
@@ -271,21 +239,11 @@ public abstract class StateMachineBase extends UIBuilder {
     }
 
 
-    protected void exitULPSpashScreen(Form f) {
-    }
-
-
     protected void exitMain(Form f) {
     }
 
     protected void beforeShow(Form f) {
     aboutToShowThisContainer = f;
-        if("ULP_SpashScreen".equals(f.getName())) {
-            beforeULPSpashScreen(f);
-            aboutToShowThisContainer = null;
-            return;
-        }
-
         if("Main".equals(f.getName())) {
             beforeMain(f);
             aboutToShowThisContainer = null;
@@ -295,21 +253,11 @@ public abstract class StateMachineBase extends UIBuilder {
     }
 
 
-    protected void beforeULPSpashScreen(Form f) {
-    }
-
-
     protected void beforeMain(Form f) {
     }
 
     protected void beforeShowContainer(Container c) {
     aboutToShowThisContainer = c;
-        if("ULP_SpashScreen".equals(c.getName())) {
-            beforeContainerULPSpashScreen(c);
-            aboutToShowThisContainer = null;
-            return;
-        }
-
         if("Main".equals(c.getName())) {
             beforeContainerMain(c);
             aboutToShowThisContainer = null;
@@ -319,20 +267,10 @@ public abstract class StateMachineBase extends UIBuilder {
     }
 
 
-    protected void beforeContainerULPSpashScreen(Container c) {
-    }
-
-
     protected void beforeContainerMain(Container c) {
     }
 
     protected void postShow(Form f) {
-        if("ULP_SpashScreen".equals(f.getName())) {
-            postULPSpashScreen(f);
-            aboutToShowThisContainer = null;
-            return;
-        }
-
         if("Main".equals(f.getName())) {
             postMain(f);
             aboutToShowThisContainer = null;
@@ -342,20 +280,10 @@ public abstract class StateMachineBase extends UIBuilder {
     }
 
 
-    protected void postULPSpashScreen(Form f) {
-    }
-
-
     protected void postMain(Form f) {
     }
 
     protected void postShowContainer(Container c) {
-        if("ULP_SpashScreen".equals(c.getName())) {
-            postContainerULPSpashScreen(c);
-            aboutToShowThisContainer = null;
-            return;
-        }
-
         if("Main".equals(c.getName())) {
             postContainerMain(c);
             aboutToShowThisContainer = null;
@@ -365,20 +293,10 @@ public abstract class StateMachineBase extends UIBuilder {
     }
 
 
-    protected void postContainerULPSpashScreen(Container c) {
-    }
-
-
     protected void postContainerMain(Container c) {
     }
 
     protected void onCreateRoot(String rootName) {
-        if("ULP_SpashScreen".equals(rootName)) {
-            onCreateULPSpashScreen();
-            aboutToShowThisContainer = null;
-            return;
-        }
-
         if("Main".equals(rootName)) {
             onCreateMain();
             aboutToShowThisContainer = null;
@@ -388,25 +306,25 @@ public abstract class StateMachineBase extends UIBuilder {
     }
 
 
-    protected void onCreateULPSpashScreen() {
-    }
-
-
     protected void onCreateMain() {
     }
 
     protected boolean setListModel(List cmp) {
         String listName = cmp.getName();
+        if("MultiList2".equals(listName)) {
+            return initListModelMultiList2(cmp);
+        }
         if("MultiList1".equals(listName)) {
             return initListModelMultiList1(cmp);
         }
         if("MultiList".equals(listName)) {
             return initListModelMultiList(cmp);
         }
-        if("MultiList11".equals(listName)) {
-            return initListModelMultiList11(cmp);
-        }
         return super.setListModel(cmp);
+    }
+
+    protected boolean initListModelMultiList2(List cmp) {
+        return false;
     }
 
     protected boolean initListModelMultiList1(List cmp) {
@@ -414,10 +332,6 @@ public abstract class StateMachineBase extends UIBuilder {
     }
 
     protected boolean initListModelMultiList(List cmp) {
-        return false;
-    }
-
-    protected boolean initListModelMultiList11(List cmp) {
         return false;
     }
 
@@ -438,8 +352,8 @@ public abstract class StateMachineBase extends UIBuilder {
                 onMain_MultiList1Action(c, event);
                 return;
             }
-            if("MultiList11".equals(c.getName())) {
-                onMain_MultiList11Action(c, event);
+            if("MultiList2".equals(c.getName())) {
+                onMain_MultiList2Action(c, event);
                 return;
             }
         }
@@ -451,7 +365,7 @@ public abstract class StateMachineBase extends UIBuilder {
       protected void onMain_MultiList1Action(Component c, ActionEvent event) {
       }
 
-      protected void onMain_MultiList11Action(Component c, ActionEvent event) {
+      protected void onMain_MultiList2Action(Component c, ActionEvent event) {
       }
 
 }
