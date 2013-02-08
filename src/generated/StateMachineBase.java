@@ -32,6 +32,7 @@ public abstract class StateMachineBase extends UIBuilder {
 
     public Container startApp(Resources res, String resPath, boolean loadTheme) {
         initVars();
+        UIBuilder.registerCustomComponent("Tabs", com.codename1.ui.Tabs.class);
         UIBuilder.registerCustomComponent("Form", com.codename1.ui.Form.class);
         UIBuilder.registerCustomComponent("InfiniteProgress", com.codename1.components.InfiniteProgress.class);
         UIBuilder.registerCustomComponent("MultiList", com.codename1.ui.list.MultiList.class);
@@ -67,6 +68,7 @@ public abstract class StateMachineBase extends UIBuilder {
 
     public Container createWidget(Resources res, String resPath, boolean loadTheme) {
         initVars();
+        UIBuilder.registerCustomComponent("Tabs", com.codename1.ui.Tabs.class);
         UIBuilder.registerCustomComponent("Form", com.codename1.ui.Form.class);
         UIBuilder.registerCustomComponent("InfiniteProgress", com.codename1.components.InfiniteProgress.class);
         UIBuilder.registerCustomComponent("MultiList", com.codename1.ui.list.MultiList.class);
@@ -145,18 +147,6 @@ public abstract class StateMachineBase extends UIBuilder {
         return cmp;
     }
 
-    public com.codename1.ui.Form findULPSpashScreen(Component root) {
-        return (com.codename1.ui.Form)findByName("ULP_SpashScreen", root);
-    }
-
-    public com.codename1.ui.Form findULPSpashScreen() {
-        com.codename1.ui.Form cmp = (com.codename1.ui.Form)findByName("ULP_SpashScreen", Display.getInstance().getCurrent());
-        if(cmp == null && aboutToShowThisContainer != null) {
-            cmp = (com.codename1.ui.Form)findByName("ULP_SpashScreen", aboutToShowThisContainer);
-        }
-        return cmp;
-    }
-
     public com.codename1.components.InfiniteProgress findInfiniteProgress(Component root) {
         return (com.codename1.components.InfiniteProgress)findByName("InfiniteProgress", root);
     }
@@ -181,14 +171,14 @@ public abstract class StateMachineBase extends UIBuilder {
         return cmp;
     }
 
-    public com.codename1.ui.Form findMain(Component root) {
-        return (com.codename1.ui.Form)findByName("Main", root);
+    public com.codename1.ui.Tabs findTabs(Component root) {
+        return (com.codename1.ui.Tabs)findByName("Tabs", root);
     }
 
-    public com.codename1.ui.Form findMain() {
-        com.codename1.ui.Form cmp = (com.codename1.ui.Form)findByName("Main", Display.getInstance().getCurrent());
+    public com.codename1.ui.Tabs findTabs() {
+        com.codename1.ui.Tabs cmp = (com.codename1.ui.Tabs)findByName("Tabs", Display.getInstance().getCurrent());
         if(cmp == null && aboutToShowThisContainer != null) {
-            cmp = (com.codename1.ui.Form)findByName("Main", aboutToShowThisContainer);
+            cmp = (com.codename1.ui.Tabs)findByName("Tabs", aboutToShowThisContainer);
         }
         return cmp;
     }
