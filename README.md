@@ -1,4 +1,8 @@
 MultiList Tutorial
 ==================
 
-Sources du tutoriel MultiList disponible sur http://www.tuto-codenameone.ch
+Tutoriel "Le composant MultiList" :
+http://www.tuto-codenameone.ch/composant-multilist/
+
+Tuto-CodenameOne
+http://www.tuto-codenameone.ch
